@@ -1,6 +1,3 @@
-const cubemainFilename = 'global\\excel\\cubemain.txt';
-const cubemain = D2RMM.readTsv(cubemainFilename);
-
 const recipeTypes = {
   oneRune: [1, false], // [runeCount, hasGem]
   oneRuneOneGem: [1, true],
@@ -10,38 +7,43 @@ const recipeTypes = {
   threeRunesOneGem: [3, true],
 }
 
-function Mod(tier, mod) {
-  cubemain.rows.forEach((row) => {
-    let input = row['input 1'];
-    let output = row.output;
+const cubemainFilenames = ['global\\excel\\cubemain.txt', 'global\\excel\\base\\cubemain.txt'];
+cubemainFilenames.forEach((cubemainFilename) => {
+  const cubemain = D2RMM.readTsv(cubemainFilename);
 
-    let tierStr = tier.toString().padStart(2, '0');
-    let nextTierStr = (tier + 1).toString().padStart(2, '0');
+  function Mod(tier, mod) {
+    cubemain.rows.forEach((row) => {
+      let input = row['input 1'];
+      let output = row.output;
 
-    if (input.startsWith('"r' + tierStr) && output == 'r' + nextTierStr) {
-      row.numinputs = mod[1] ? mod[0] + 1 : mod[0];
-      row['input 1'] = mod[0] > 1
-        ? '"r' + tierStr + ',qty=' + mod[0] + '"'
-        : 'r' + tierStr;
+      let tierStr = tier.toString().padStart(2, '0');
+      let nextTierStr = (tier + 1).toString().padStart(2, '0');
 
-      if (!mod[1])
-        row['input 2'] = '';
+      if (input.startsWith('"r' + tierStr) && output == 'r' + nextTierStr) {
+        row.numinputs = mod[1] ? mod[0] + 1 : mod[0];
+        row['input 1'] = mod[0] > 1
+          ? '"r' + tierStr + ',qty=' + mod[0] + '"'
+          : 'r' + tierStr;
 
-      return;
-    }
-  });
-}
+        if (!mod[1])
+          row['input 2'] = '';
 
-// Low tiers
-for (let tier = 1; tier <= 9; tier++)
-  Mod(tier, recipeTypes[config.lowRuneCost]);
+        return;
+      }
+    });
+  }
 
-// Mid tiers
-for (let tier = 10; tier <= 20; tier++)
-  Mod(tier, recipeTypes[config.midRuneCost]);
+  // Low tiers
+  for (let tier = 1; tier <= 9; tier++)
+    Mod(tier, recipeTypes[config.lowRuneCost]);
 
-// High tiers
-for (let tier = 21; tier <= 32; tier++)
-  Mod(tier, recipeTypes[config.highRuneCost]);
+  // Mid tiers
+  for (let tier = 10; tier <= 20; tier++)
+    Mod(tier, recipeTypes[config.midRuneCost]);
 
-D2RMM.writeTsv(cubemainFilename, cubemain);
+  // High tiers
+  for (let tier = 21; tier <= 32; tier++)
+    Mod(tier, recipeTypes[config.highRuneCost]);
+
+  D2RMM.writeTsv(cubemainFilename, cubemain);
+});
