@@ -1,0 +1,51 @@
+{
+  "name": "Rune Easy Upgrade",
+  "description": "Adds easier rune upgrade recipes: two of the same rune upgrades to the next rune tier, no gems required.",
+  "author": "Jobus",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/217",
+  "version": "1.2.0",
+  "config": [
+    {
+      "id": "lowRuneCost",
+      "type": "select",
+      "name": "Cost of low tier runes",
+      "description": "Set the cost of low tier runes (El to Thul), which normally cost 3 runes to upgrade.",
+      "defaultValue": "twoRunes",
+      "options": [
+        { "value": "oneRune", "label": "1 Rune", "description": "Incompatible with Stackable Runes" },
+        { "value": "twoRunes", "label": "2 Runes" },
+        { "value": "threeRunes", "label": "3 Runes", "description": "Vanilla" }
+      ]
+    },
+    {
+      "id": "midRuneCost",
+      "type": "select",
+      "name": "Cost of mid tier runes",
+      "description": "Set the cost of mid tier runes (Amn to Pul), which normally cost 3 runes and a gem to upgrade.",
+      "defaultValue": "twoRunes",
+      "options": [
+        { "value": "oneRune", "label": "1 Rune", "description": "Incompatible with Stackable Runes" },
+        { "value": "oneRuneOneGem", "label": "1 Runes + 1 Gem" },
+        { "value": "twoRunes", "label": "2 Runes" },
+        { "value": "twoRunesOneGem", "label": "2 Runes + 1 Gem" },
+        { "value": "threeRunes", "label": "3 Runes" },
+        { "value": "threeRunesOneGem", "label": "3 Runes + 1 Gem", "description": "Vanilla" }
+      ]
+    },
+    {
+      "id": "highRuneCost",
+      "type": "select",
+      "name": "Cost of high tier runes",
+      "description": "Set the cost of high tier runes (Um to Zod), which normally cost 2 runes and a gem to upgrade.",
+      "defaultValue": "twoRunes",
+      "options": [
+        { "value": "oneRune", "label": "1 Rune", "description": "Incompatible with Stackable Runes" },
+        { "value": "oneRuneOneGem", "label": "1 Runes + 1 Gem" },
+        { "value": "twoRunes", "label": "2 Runes" },
+        { "value": "twoRunesOneGem", "label": "2 Runes + 1 Gem", "description": "Vanilla" },
+        { "value": "threeRunes", "label": "3 Runes" },
+        { "value": "threeRunesOneGem", "label": "3 Runes + 1 Gem" }
+      ]
+    }
+  ]
+}

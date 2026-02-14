@@ -1,0 +1,29 @@
+{
+  "name": "Rune Downgrade",
+  "description": "Put any rune through the horadric cube to downgrade it to the previous tier.",
+  "author": "Jobus",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/216",
+  "version": "1.3.0",
+  "config": [
+    {
+      "id": "requireScrollOfIdentify",
+      "type": "checkbox",
+      "name": "Require Scroll of Identify",
+      "description": "Downgrade recipes will require a Scroll of Identify. Required for compatibility with the Stackable Runes mod and Rune Easy Upgrade mod with 1 Rune cost.",
+      "defaultValue": false
+    },
+    {
+      "id": "outputCount",
+      "type": "select",
+      "name": "Output Count",
+      "description": "How many runes the downgrade recipes give.",
+      "options": [
+        { "label": "1", "value": "1" },
+        { "label": "2", "value": "2" },
+        { "label": "3", "value": "3" },
+        { "label": "3/2", "value": "3/2", "description": "3 for low/mid, 2 for high" }
+      ],
+      "defaultValue": "1"
+    }
+  ]
+}

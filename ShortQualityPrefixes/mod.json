@@ -1,0 +1,30 @@
+{
+  "name": "Short Quality Prefixes",
+  "description": "Makes item quality prefixes such as 'Superior' and 'Damaged' shorter and colors low quality item names gray.",
+  "author": "Jobus",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/214",
+  "version": "1.1.1",
+  "config": [
+    {
+      "id": "superiorPrefix",
+      "type": "text",
+      "name": "Superior Prefix",
+      "description": "What label to replace the Superior prefix with.",
+      "defaultValue": "+"
+    },
+    {
+      "id": "inferiorPrefix",
+      "type": "text",
+      "name": "Inferior Prefix",
+      "description": "What label to replace the Damaged/Cracked/etc prefixes with.",
+      "defaultValue": "-"
+    },
+    {
+      "id": "grayInferior",
+      "type": "checkbox",
+      "name": "Gray Inferior",
+      "description": "Color inferior item names gray.",
+      "defaultValue": true
+    }
+  ]
+}
