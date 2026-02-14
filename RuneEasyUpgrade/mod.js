@@ -10,6 +10,7 @@ const recipeTypes = {
 const cubemainFilenames = ['global\\excel\\cubemain.txt', 'global\\excel\\base\\cubemain.txt'];
 cubemainFilenames.forEach((cubemainFilename) => {
   const cubemain = D2RMM.readTsv(cubemainFilename);
+  if (!cubemain) return;
 
   function Mod(tier, mod) {
     cubemain.rows.forEach((row) => {

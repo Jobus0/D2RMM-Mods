@@ -1,6 +1,7 @@
 const cubemainFilenames = ['global\\excel\\cubemain.txt', 'global\\excel\\base\\cubemain.txt'];
 cubemainFilenames.forEach((cubemainFilename) => {
   const cubemain = D2RMM.readTsv(cubemainFilename);
+  if (!cubemain) return;
   const eolKey = Object.keys(cubemain.rows[0]).find(key => key.startsWith('*eol'));
 
   for (let tier = 2; tier <= 33; tier++) {
