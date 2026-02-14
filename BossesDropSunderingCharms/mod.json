@@ -1,4 +1,5 @@
 {
+  "$schema": "../config-schema.json",
   "name": "Bosses Drop Sundering Charms",
   "description": "Allows the Sundering Charms to drop from bosses and/or regular monsters.",
   "author": "Jobus",

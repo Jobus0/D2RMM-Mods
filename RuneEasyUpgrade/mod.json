@@ -1,4 +1,5 @@
 {
+  "$schema": "../config-schema.json",
   "name": "Rune Easy Upgrade",
   "description": "Adds easier rune upgrade recipes: two of the same rune upgrades to the next rune tier, no gems required.",
   "author": "Jobus",

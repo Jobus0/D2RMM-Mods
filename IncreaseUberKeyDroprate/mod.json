@@ -1,4 +1,5 @@
 {
+  "$schema": "../config-schema.json",
   "name": "Increase Uber Key Droprate",
   "description": "Multiply the probability for the uber keys to drop.",
   "author": "Jobus",
