@@ -35,6 +35,7 @@ if (config.enablebossitempool && config.bossdropweight > 0) {
   const treasureclassexFilenames = ['global\\excel\\treasureclassex.txt', 'global\\excel\\base\\treasureclassex.txt'];
   treasureclassexFilenames.forEach((treasureclassexFilename) => {
     const treasureclassex = D2RMM.readTsv(treasureclassexFilename);
+    const eolKey = Object.keys(treasureclassex.rows[0]).find(key => key.startsWith('*eol'));
 
     let index = 0;
     treasureclassex.rows.forEach((row) => {
@@ -44,7 +45,8 @@ if (config.enablebossitempool && config.bossdropweight > 0) {
         let sunderCharmsMod = {
           'Treasure Class': "Sunder Charms (Mod)",
           Picks: 1,
-          NoDrop: 0
+          NoDrop: 0,
+          [eolKey]: 0,
         };
 
         for (let i = 1; i <= 10; i++) {

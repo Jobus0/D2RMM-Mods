@@ -1,6 +1,7 @@
 const cubemainFilenames = ['global\\excel\\cubemain.txt', 'global\\excel\\base\\cubemain.txt'];
 cubemainFilenames.forEach((cubemainFilename) => {
   const cubemain = D2RMM.readTsv(cubemainFilename);
+  const eolKey = Object.keys(cubemain.rows[0]).find(key => key.startsWith('*eol'));
 
   for (let tier = 2; tier <= 33; tier++) {
     let previousTier = tier - 1;
@@ -13,7 +14,7 @@ cubemainFilenames.forEach((cubemainFilename) => {
       numinputs: 1,
       'input 1': 'r' + tier.toString().padStart(2, '0'),
       output: output,
-      '*eol': 0,
+      [eolKey]: 0,
     };
 
     if (config.requireScrollOfIdentify) {
