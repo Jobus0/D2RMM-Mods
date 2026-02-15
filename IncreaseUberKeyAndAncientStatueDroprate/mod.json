@@ -4,7 +4,7 @@
   "description": "Multiply the probability for uber keys and ancient statues to drop.",
   "author": "Jobus",
   "website": "https://www.nexusmods.com/diablo2resurrected/mods/215",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "config": [
     {
       "id": "multiplier",

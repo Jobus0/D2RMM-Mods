@@ -4,7 +4,7 @@
   "description": "Allows the Sundering Charms to drop from bosses and/or regular monsters.",
   "author": "Jobus",
   "website": "https://www.nexusmods.com/diablo2resurrected/mods/270",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "config": [
     {
       "id": "enablebossitempool",

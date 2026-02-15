@@ -4,7 +4,7 @@
   "description": "Makes item quality prefixes such as 'Superior' and 'Damaged' shorter and colors low quality item names gray.",
   "author": "Jobus",
   "website": "https://www.nexusmods.com/diablo2resurrected/mods/214",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "config": [
     {
       "id": "superiorPrefix",
