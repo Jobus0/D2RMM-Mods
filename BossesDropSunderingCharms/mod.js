@@ -2,7 +2,7 @@ if (config.enableregularitempool) {
   const uniqueitemsFilenames = ['global\\excel\\uniqueitems.txt', 'global\\excel\\base\\uniqueitems.txt'];
   uniqueitemsFilenames.forEach((uniqueitemsFilename) => {
     const uniqueitems = D2RMM.readTsv(uniqueitemsFilename);
-    if (!uniqueitems) return;
+    if (!uniqueitems || uniqueitems.rows.length === 0) return;
 
     uniqueitems.rows.forEach((row) => {
       let index = row.index;
@@ -36,7 +36,7 @@ if (config.enablebossitempool && config.bossdropweight > 0) {
   const treasureclassexFilenames = ['global\\excel\\treasureclassex.txt', 'global\\excel\\base\\treasureclassex.txt'];
   treasureclassexFilenames.forEach((treasureclassexFilename) => {
     const treasureclassex = D2RMM.readTsv(treasureclassexFilename);
-    if (!treasureclassex) return;
+    if (!treasureclassex || treasureclassex.rows.length === 0) return;
     const eolKey = Object.keys(treasureclassex.rows[0]).find(key => key.startsWith('*eol'));
 
     let index = 0;
