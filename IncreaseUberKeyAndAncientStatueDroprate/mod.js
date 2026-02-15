@@ -13,16 +13,15 @@ treasureclassexFilenames.forEach((treasureclassexFilename) => {
   }
 
   treasureclassex.rows.forEach((row) => {
-    const treasureClass = row['Treasure Class'];
+    MultiplyProb(row, 'pk1');
+    MultiplyProb(row, 'pk2');
+    MultiplyProb(row, 'pk3');
 
-    if (treasureClass.startsWith('Countess Item (H)'))
-      MultiplyProb(row, 'pk1')
-
-    if (treasureClass.startsWith('Summoner (H)') || treasureClass.startsWith('Summoner Item (H)'))
-      MultiplyProb(row, 'pk2')
-
-    if (treasureClass.startsWith('Nihlathak (H)') || treasureClass.startsWith('Nihlathak Item (H)'))
-      MultiplyProb(row, 'pk3')
+    MultiplyProb(row, 'Ancient Statue 1');
+    MultiplyProb(row, 'Ancient Statue 2');
+    MultiplyProb(row, 'Ancient Statue 3');
+    MultiplyProb(row, 'Ancient Statue 4');
+    MultiplyProb(row, 'Ancient Statue 5');
   });
   D2RMM.writeTsv(treasureclassexFilename, treasureclassex);
 });
