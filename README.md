@@ -16,5 +16,5 @@ Adds easier rune upgrade recipes: two of the same rune upgrades to the next rune
 ### [Short Quality Prefixes](https://www.nexusmods.com/diablo2resurrected/mods/214)
 Makes item quality prefixes such as 'Superior' and 'Damaged' shorter and colors low quality item names gray.
 
-### [Increase Uber Key Droprate](https://www.nexusmods.com/diablo2resurrected/mods/215)
-Multiply the probability for the uber keys to drop.
+### [Increase Uber Key And Ancient Statue Droprate](https://www.nexusmods.com/diablo2resurrected/mods/215)
+Multiply the probability for the uber keys and colossal ancient statues to drop.
