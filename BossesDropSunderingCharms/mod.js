@@ -1,32 +1,42 @@
 if (config.enableregularitempool) {
-  const uniqueitemsFilenames = ['global\\excel\\uniqueitems.txt', 'global\\excel\\base\\uniqueitems.txt'];
-  uniqueitemsFilenames.forEach((uniqueitemsFilename) => {
-    const uniqueitems = D2RMM.readTsv(uniqueitemsFilename);
-    if (!uniqueitems || uniqueitems.rows.length === 0) return;
+  const uniqueitemsFilename = 'global\\excel\\uniqueitems.txt';
+  const uniqueitemsBaseFilename = 'global\\excel\\base\\uniqueitems.txt';
+  const uniqueitems = D2RMM.readTsv(uniqueitemsFilename);
+  const uniqueitemsBase = D2RMM.readTsv(uniqueitemsBaseFilename);
+
+  // For backwards compatibility with pre-Reign versions
+  if (!uniqueitemsBase || uniqueitemsBase.rows.length === 0) {
+    uniqueitems.rows.forEach((row) => {
+      let index = row.index;
+
+      const sunderCharms = ['Cold Rupture', 'Flame Rift', 'Crack of the Heavens', 'Rotting Fissure', 'Bone Break', 'Black Cleft'];
+      if (sunderCharms.includes(index)) {
+        row.enabled = 1;
+      }
+    });
+    D2RMM.writeTsv(uniqueitemsFilename, uniqueitems);
+  }
+  else {
+    uniqueitemsBase.rows.forEach((row) => {
+      let index = row.index;
+
+      const sunderCharms = ['Cold Rupture', 'Flame Rift', 'Crack of the Heavens', 'Rotting Fissure', 'Bone Break', 'Black Cleft'];
+      if (sunderCharms.includes(index)) {
+        row.spawnable = 1;
+      }
+    });
+    D2RMM.writeTsv(uniqueitemsBaseFilename, uniqueitemsBase);
 
     uniqueitems.rows.forEach((row) => {
       let index = row.index;
 
-      if (index === 'Cold Rupture')
-        row.enabled = 1;
-
-      if (index === 'Flame Rift')
-        row.enabled = 1;
-
-      if (index === 'Crack of the Heavens')
-        row.enabled = 1;
-
-      if (index === 'Rotting Fissure')
-        row.enabled = 1;
-
-      if (index === 'Bone Break')
-        row.enabled = 1;
-
-      if (index === 'Black Cleft')
-        row.enabled = 1;
+      const precraftedSunderCharms = ['PreCrafted Cold Rupture', 'PreCrafted Flame Rift', 'PreCrafted Crack of the Heavens', 'PreCrafted Rotting Fissure', 'PreCrafted Bone Break', 'PreCrafted Black Cleft'];
+      if (precraftedSunderCharms.includes(index)) {
+        row.DropConditionCalc = ''; // By default, Reign expansion charms are filtered by a condition instead of spawnable=0, so we need to remove that.
+      }
     });
     D2RMM.writeTsv(uniqueitemsFilename, uniqueitems);
-  });
+  }
 }
 
 if (config.enablebossitempool && config.bossdropweight > 0) {
