@@ -1,0 +1,50 @@
+{
+  "$schema": "../config-schema.json",
+  "name": "Increase Sunder Charm Drops",
+  "description": "Customizable drop rates for Sunder Charms, plus options to add them to regular bosses and monsters.",
+  "author": "Jobus",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/270",
+  "version": "2.0.0",
+  "config": [
+    {
+      "id": "terrorZoneDroprateMultiplier",
+      "type": "number",
+      "name": "Terror Zone Droprate Multiplier",
+      "description": "Multiplies the chance for Sunder Charms to drop in Terror Zones. Set to 1 for vanilla drop rates.",
+      "defaultValue": 5,
+      "minValue": 0.1,
+      "maxValue": 1000
+    },
+    {
+      "id": "addToBossLootTables",
+      "type": "checkbox",
+      "name": "Add to Boss Loot Tables",
+      "description": "Allows regular Hell bosses (Andariel, Duriel, etc) and some mini-bosses (Blood Raven, The Summoner, etc) to drop Sunder Charms outside of Terror Zones.",
+      "defaultValue": false
+    },
+    {
+      "id": "bossDropWeight",
+      "type": "number",
+      "name": "Boss Drop Weight",
+      "description": "The probability weight for regular Hell bosses to drop Sunder Charms. Higher = more frequent. \nExamples: 5 = ~20% chance. 0.5 = ~2.5% chance.",
+      "defaultValue": 1,
+      "minValue": 0,
+      "maxValue": 1000,
+      "visible": ["value", "addToBossLootTables"]
+    },
+    {
+      "id": "addToGlobalLootTables",
+      "type": "checkbox",
+      "name": "Add to Global Loot Tables",
+      "description": "Allows ANY monster in Hell difficulty to drop Sunder Charms. WARNING: This dilutes the 'Unique Charm' pool, making Gheed's Fortune significantly rarer (~7x).",
+      "defaultValue": false
+    },
+    {
+      "id": "equalizeElementalRatios",
+      "type": "checkbox",
+      "name": "Equalize Elemental Ratios",
+      "description": "Removes the rarity tiers between charms. Magic, Physical, and Poison charms will drop as frequently as Fire, Cold, and Lightning.",
+      "defaultValue": false
+    }
+  ]
+}

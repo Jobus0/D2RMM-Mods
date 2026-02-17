@@ -4,8 +4,8 @@ This repository contains various mods for [D2RMM](https://github.com/olegbl/d2rm
 
 #### Also on [NexusMods](https://www.nexusmods.com/profile/Jobus0/mods?gameId=4061).
 
-### [Bosses Drop Sunder Charms](https://www.nexusmods.com/diablo2resurrected/mods/270)
-Allows the Sunder Charms to drop from regular bosses and/or monsters.
+### [Increase Sunder Charm Drops](https://www.nexusmods.com/diablo2resurrected/mods/270)
+Customizable drop rates for Sunder Charms, plus options to add them to regular bosses and monsters.
 
 ### [Rune Downgrade](https://www.nexusmods.com/diablo2resurrected/mods/216)
 Put any rune through the horadric cube to downgrade it to the previous tier.
