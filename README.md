@@ -2,7 +2,7 @@
 
 This repository contains various mods for [D2RMM](https://github.com/olegbl/d2rmm).
 
-See more at my [NexusMods profile mods page](https://www.nexusmods.com/profile/Jobus0/mods?gameId=4061).
+#### Also on [NexusMods](https://www.nexusmods.com/profile/Jobus0/mods?gameId=4061).
 
 ### [Bosses Drop Sunder Charms](https://www.nexusmods.com/diablo2resurrected/mods/270)
 Allows the Sunder Charms to drop from regular bosses and/or monsters.
@@ -16,5 +16,5 @@ Adds easier rune upgrade recipes: two of the same rune upgrades to the next rune
 ### [Short Quality Prefixes](https://www.nexusmods.com/diablo2resurrected/mods/214)
 Makes item quality prefixes such as 'Superior' and 'Damaged' shorter and colors low quality item names gray.
 
-### [Increase Uber Key And Ancient Statue Droprate](https://www.nexusmods.com/diablo2resurrected/mods/215)
+### [Increase Uber Key and Ancient Statue Droprate](https://www.nexusmods.com/diablo2resurrected/mods/215)
 Multiply the probability for the uber keys and colossal ancient statues to drop.
