@@ -4,8 +4,8 @@ This repository contains various mods for [D2RMM](https://github.com/olegbl/d2rm
 
 See more at my [NexusMods profile mods page](https://www.nexusmods.com/profile/Jobus0/mods?gameId=4061).
 
-### [Bosses Drop Sundering Charms](https://www.nexusmods.com/diablo2resurrected/mods/270)
-Allows the Sundering Charms to drop from bosses and/or regular monsters.
+### [Bosses Drop Sunder Charms](https://www.nexusmods.com/diablo2resurrected/mods/270)
+Allows the Sunder Charms to drop from regular bosses and/or monsters.
 
 ### [Rune Downgrade](https://www.nexusmods.com/diablo2resurrected/mods/216)
 Put any rune through the horadric cube to downgrade it to the previous tier.
