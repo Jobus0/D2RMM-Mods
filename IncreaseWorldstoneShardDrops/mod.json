@@ -1,0 +1,19 @@
+{
+  "$schema": "../config-schema.json",
+  "name": "Increase Worldstone Shard Drops",
+  "description": "Multiply the probability for Worldstone Shards to drop.",
+  "author": "Jobus",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/1035",
+  "version": "1.0.0",
+  "config": [
+    {
+      "id": "multiplier",
+      "type": "number",
+      "name": "Probability Multiplier",
+      "description": "The factor by which to increase shard drops (divides the NoDrop value). Higher = more shards.",
+      "defaultValue": 2,
+      "minValue": 0.1,
+      "maxValue": 1000
+    }
+  ]
+}

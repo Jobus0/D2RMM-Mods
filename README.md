@@ -18,3 +18,6 @@ Makes item quality prefixes such as 'Superior' and 'Damaged' shorter and colors 
 
 ### [Increase Uber Key and Ancient Statue Droprate](https://www.nexusmods.com/diablo2resurrected/mods/215)
 Multiply the probability for the uber keys and colossal ancient statues to drop.
+
+### [Increase Worldstone Shard Drops](https://www.nexusmods.com/diablo2resurrected/mods/1035)
+Multiply the probability for Worldstone Shards to drop.
